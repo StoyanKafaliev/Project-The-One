@@ -49,6 +49,14 @@ namespace MVC_WorkingWIthData.Controllers
         [HttpGet]
         public ActionResult Details()
         {
+            if (true)
+            {
+                
+            }
+            else
+            {
+
+            }
             ApplicationDbContext context = new ApplicationDbContext();
 
             return View(context.Studnets.FirstOrDefault());
