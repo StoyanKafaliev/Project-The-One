@@ -1,0 +1,38 @@
+﻿@model MVC_WorkingWIthData.InputModels.StudentsInput
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.LabelFor(x => x.FirstName)
+    @Html.EditorFor(x => x.FirstName, new { name = "FirstName" })
+    @Html.ValidationMessageFor(x => x.FirstName);
+    <br />
+    @Html.LabelFor(x => x.LastName)
+    @Html.EditorFor(x => x.LastName, new { name = "LastName" })
+    @Html.ValidationMessageFor(x => x.LastName);
+    <br />
+    @Html.LabelFor(x => x.FacNumber)
+    @Html.EditorFor(x => x.FacNumber, new { name = "FacNumber" })
+    @Html.ValidationMessageFor(x => x.FacNumber);
+    <br />
+    @Html.LabelFor(x => x.Grade)
+    @Html.EditorFor(x => x.Grade, new { name = "Grade" })
+    @Html.ValidationMessageFor(x => x.Grade);
+
+    <br />
+    @Html.LabelFor(x => x.Addres.Country)
+    @Html.EditorFor(x => x.Addres.Country, new { name = "Addres.Country" })
+    @Html.ValidationMessageFor(x => x.Addres.Country);
+    <br />
+    @Html.LabelFor(x => x.Addres.Town)
+    @Html.EditorFor(x => x.Addres.Town, new { name = "Addres.Town" })
+    @Html.ValidationMessageFor(x => x.Addres.Town);
+    <br />
+
+    <input type="submit" name="Submit" />
+}
+
+@section scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
